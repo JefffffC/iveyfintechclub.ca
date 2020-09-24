@@ -1,0 +1,30 @@
+{
+  "name": "Ivey-FinTech",
+  "version": "1.0.0",
+  "description": "Install NPM into root directory. Run this command to start http-server:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server -a localhost -p 8000 -c-1s",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JefffffC/Ivey-FinTech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JefffffC/Ivey-FinTech/issues"
+  },
+  "homepage": "https://github.com/JefffffC/Ivey-FinTech#readme",
+  "dependencies": {
+    "countup.js": "^2.0.4",
+    "particles.js": "^2.0.0",
+    "typed.js": "^2.0.10"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "http-server": "^0.11.1"
+  }
+}

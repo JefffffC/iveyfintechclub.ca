@@ -1,0 +1,123 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-y: visible;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+body {
+  background-color: #034638;
+  color: #fff;
+}
+
+/* Start of navbar styles */
+
+#mainNavbar {
+  font-size: 1.25rem;
+  font-weight: 300;
+  background-color: #034638;
+  transition: background 0.4s ease;
+}
+
+#IveyFintechMainLogo {
+  height: 40px;
+  margin-top: 0.2rem;
+  transition: all 1s ease;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.nav-link {
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color:focus,
+.dropdown-item-text-color:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #fff;
+}
+
+.dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+
+  border-color: transparent;
+  border-bottom-left-radius: 4px;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  padding: 0;
+  margin: 0;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #034638;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown.show .dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s, visibility 0s;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  max-height: 190px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* End of nav-bar styling */
+
+.fullscreen-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calendar-holder {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  overflow: auto;
+}
+
+#calendarTitle {
+  color: #FFF;
+}

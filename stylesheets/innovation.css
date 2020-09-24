@@ -1,0 +1,564 @@
+/*Ivey Green: #034638*, RGB: R3, G70, B56 */
+/*Possible custom burger icons: https://codepen.io/designcouch/pen/Atyop*/
+/*Finesse Menu Animations: https://www.josh.ai/*/
+/*Using multiple shapes in particles.js (bitcoins, $s, dots, etc.)*/
+/*Finesse Calendar Application for Calendar Tab: https://www.raymondcamden.com/2017/02/24/an-example-of-a-static-site-with-a-dynamic-calendar*/
+/*Finesse a Google Calendar Integration: https://support.google.com/calendar/answer/41207?hl=en*/
+
+/*COLOR PALETTE:
+
+Ivey Green:			#034638 | rgb(3,70,56)
+Slate Gray:			#6B6D76 | rgb(107,109,118)
+Zorba Brown:		#A69888 | rgb(166,152,136)
+White:				#FFFFFF | rgb(255,255,255)
+Wild Blue Yonder	#6982AD | rgb(105,130,173)	
+
+*/
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /*  overflow-x: hidden;*/
+  overflow-y: visible;
+  font-family: Roboto;
+  font-weight: 400;
+  background-image: url("../images/innovation/Innovation\ splash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
+  background-attachment: fixed;
+}
+
+#typing-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-image: transparent;
+  min-height: 500px;
+}
+
+.particles-section {
+  position: relative;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
+  background-image: linear-gradient(transparent, white);
+}
+
+/* Patch that fixes a display bug associated with background-attachment: fixed not working on mobile Safari */
+@media (max-width: 991.98px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    body,
+    html {
+      background-attachment: local;
+    }
+  }
+}
+
+/* Start of navbar styles */
+
+#mainNavbar {
+  font-size: 1.25rem;
+  font-weight: 300;
+  background-color: #6982ad;
+  transition: background 0.4s ease;
+}
+
+#IveyFintechMainLogo {
+  height: 40px;
+  margin-top: 0.2rem;
+  transition: all 1s ease;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.nav-link {
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color:focus,
+.dropdown-item-text-color:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #fff;
+}
+
+.dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+
+  border-color: transparent;
+  border-bottom-left-radius: 4px;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  padding: 0;
+  margin: 0;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #6982ad;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown.show .dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s, visibility 0s;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  max-height: 190px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* End of nav-bar styling */
+
+#typing-section .content-jumbosplash #mainHeader {
+  color: #6982ad;
+  font-weight: 700;
+  font-size: 8rem;
+  padding-top: 100px;
+}
+#typing-section .content-jumbosplash #mainSubheader {
+  color: #6982ad;
+  text-align: left;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+/* Cursor */
+.typed-cursor {
+  color: #6982ad;
+  text-align: left;
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+  color: #6982ad;
+  text-align: left;
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+#typing-section .content-jumbosplash {
+  text-align: left;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2), 0px 8px 40px rgba(0, 0, 0, 0),
+    0px 0px 50px rgba(0, 0, 0, 0);
+}
+@media (max-width: 991.98px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+  }
+}
+
+.btn,
+.btn-light,
+.btn-lg,
+.mt-4 {
+  color: #6982ad !important;
+  text-shadow: none !important;
+}
+
+.particles-section .content-jumbosplash #mainIHeader {
+  color: #6982ad;
+  font-weight: 700;
+  font-size: 5rem;
+  padding-top: 100px;
+}
+
+#innovation-content {
+  background-color: white;
+}
+
+.description-paragraph {
+  font-weight: 300;
+  line-height: 2;
+  text-align: start;
+  font-size: 1.25rem;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+}
+
+.heading-line {
+  color: #6982ad;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+h3,
+.heading-description {
+  color: #6982ad;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .rotating-container,
+  .rotating-container2,
+  .rotating-item,
+  .rotating-item2 {
+    animation: none;
+  }
+}
+
+.rotating-item {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.rotating-icon {
+  font-size: 500%;
+  color: #6982ad;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.rotating-icon:hover {
+  color: #a69888;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+#project-management-highlight,
+#app-dev-highlight,
+#public-speaking-highlight,
+#portfolio-highlight,
+#coding-file-highlight,
+#recruiting-highlight {
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+}
+
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.timeline-item {
+  z-index: 10;
+  position: relative;
+  width: 110px;
+}
+
+.timeline-item::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #6982ad;
+  font-size: 3.5vw;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-item > input:checked ~ .timeline-item {
+  background-color: blue;
+}
+
+.selector:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  color: #a69888 !important;
+}
+
+#about-section {
+  display: block;
+  width: 100%;
+}
+
+.timeline-bar {
+  display: block;
+  height: 10px;
+  position: absolute;
+  z-index: 9;
+  transform: translateY(50px);
+}
+
+#timeline-bar-static {
+  background-color: #6982ad;
+  width: 100%;
+}
+
+#timeline-bar-dynamic {
+  background-color: #a69888;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#timeline-container {
+  position: relative;
+  width: 100%;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
+}
+
+.timeline-item {
+  margin: 0;
+  padding: 0;
+}
+
+#timeline-description {
+  height: 16rem;
+}
+
+.pop-description {
+  text-align: center;
+  display: block;
+  opacity: 0;
+  height: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.immobile-image {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.company-logo {
+  width: 300px;
+  object-fit: cover;
+  vertical-align: middle;
+  filter: brightness(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.company-logo:hover {
+  filter: none;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.fade-out-section {
+  position: relative;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-image: linear-gradient(white, transparent);
+}
+
+@media (max-width: 991.98px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+		.fade-out-section.container-fluid {
+			background-image: none;
+			background-color: white;
+		}
+		.particles-section.container-fluid {
+			background-image: none;
+			background-color: white;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+  .timeline-item {
+    width: 80px;
+  }
+  .timeline-bar {
+    transform: translateY(35px);
+  }
+}
+
+@media (max-width: 767px) {
+  .timeline-item {
+    width: 60px;
+  }
+  .timeline-bar {
+    transform: translateY(25px);
+  }
+}
+
+@media (max-width: 550px) {
+  .timeline-item {
+    width: 50px;
+  }
+  .timeline-bar {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 440px) {
+  .timeline-item {
+    width: 40px;
+  }
+  .timeline-bar {
+    transform: translateY(15px);
+  }
+}
+/*<--Responsive Media Queries-->*/
+
+@media (max-width: 1200px) {
+  #IveyFintechMainLogo {
+    height: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 3rem;
+  }
+  .typed-cursor {
+    font-size: 3.5rem;
+  }
+  .typed-fade-out {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .particles-section .content-jumbosplash #mainIHeader {
+    font-size: 3.5rem;
+  }
+  #typing-section .content-jumbosplash #mainHeader {
+    font-size: 3.5rem;
+  }
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 2rem;
+  }
+  .typed-cursor {
+    font-size: 2.5rem;
+  }
+  .typed-fade-out {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #IveyFintechMainLogo {
+    height: 35px;
+  }
+  .particles-section .content-jumbosplash #mainIHeader {
+    font-size: 2.5rem;
+  }
+  .description-paragraph {
+    font-size: 1rem;
+  }
+  .heading-line {
+    font-size: 3rem;
+  }
+  #timeline-cta {
+    font-size: 2rem;
+  }
+  .rotating-icon {
+    font-size: 300%;
+  }
+}
+
+@media (max-width: 470px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 1.75rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+  }
+  .typed-fade-out {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 470px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 1.75rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+  }
+  .typed-fade-out {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 440px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 1.4rem;
+  }
+  .typed-cursor {
+    font-size: 1.6rem;
+  }
+  .typed-fade-out {
+    font-size: 1.6rem;
+  }
+  #timeline-cta {
+    font-size: 1.5rem;
+  }
+}

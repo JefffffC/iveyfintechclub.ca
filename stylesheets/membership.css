@@ -1,0 +1,274 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /*  overflow-x: hidden;*/
+  overflow-y: visible;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+body {
+  background-color: #034638;
+  color: #fff;
+}
+
+/* Start of navbar styles */
+
+#mainNavbar {
+  font-size: 1.25rem;
+  font-weight: 300;
+  background-color: #034638;
+  transition: background 0.4s ease;
+}
+
+#IveyFintechMainLogo {
+  height: 40px;
+  margin-top: 0.2rem;
+  transition: all 1s ease;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.nav-link {
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color:focus,
+.dropdown-item-text-color:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #fff;
+}
+
+.dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+
+  border-color: transparent;
+  border-bottom-left-radius: 4px;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  padding: 0;
+  margin: 0;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #034638;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown.show .dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s, visibility 0s;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  max-height: 190px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* End of nav-bar styling */
+
+.fullscreen-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 800px;
+}
+
+h1.mainHeader {
+  font-weight: 700;
+  font-size: 4.5rem;
+}
+
+.membership-content-holder {
+  width: 100%;
+}
+
+p.mainDescription {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.mission-slideshow {
+  height: 100%;
+  border-radius: 5px;
+  padding: 0 !important;
+  background-color: transparent;
+  width: 100%;
+}
+
+.carousel-item {
+  height: auto;
+}
+
+.mission-slideshow-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+}
+
+.faq-item {
+  width: 315px;
+}
+
+.sub-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.sub-description {
+  font-size: 0.8rem;
+  line-height: 2;
+  font-weight: 300;
+  text-align: left;
+}
+
+#apply-now {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.application-box {
+  margin: 25px;
+  padding: 25px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 315px;
+  height: 205px;
+}
+
+.application-box.general {
+  width: auto;
+  max-width: 380px;
+  min-width: 308px;
+}
+
+.apply-btn-holder {
+  width: 100%;
+}
+
+.apply-btn {
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.apply-btn:hover {
+  color: #034638;
+}
+.apply-btn:hover .apply-btn-text {
+  color: #034638;
+}
+.apply-btn-text {
+  font-weight: 600;
+}
+
+.sub-header.portfolio-appheader {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.sub-description > .link {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.sub-description.link:hover {
+  font-weight: bold;
+}
+
+/* Responsiv media queries */
+@media (max-width: 1199.98px) {
+  p.mainDescription {
+    font-size: 1rem;
+  }
+  .mission-slideshow-img {
+    height: 280px;
+  }
+}
+@media (max-width: 991.98px) {
+}
+@media (max-width: 767.98px) {
+  h1.mainHeader {
+    font-size: 3.5rem;
+  }
+  .mission-slideshow-img {
+    height: 240px;
+  }
+  p.mainDescription {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 575.98px) {
+
+  h1.mainHeader {
+    font-size: 3rem;
+  }
+
+  .mission-slideshow-img {
+    height: 200px;
+    object-position: top;
+  }
+  p.mainDescription {
+    font-size: 0.7rem;
+  }
+
+  .faq-item {
+    width: 300px;
+  }
+
+  .sub-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .sub-description {
+    font-size: 0.7rem;
+    line-height: 2;
+    font-weight: 300;
+    text-align: left;
+  }
+}

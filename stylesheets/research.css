@@ -1,0 +1,571 @@
+/*Ivey Green: #034638*, RGB: R3, G70, B56 */
+/*Possible custom burger icons: https://codepen.io/designcouch/pen/Atyop*/
+/*Finesse Menu Animations: https://www.josh.ai/*/
+/*Using multiple shapes in particles.js (bitcoins, $s, dots, etc.)*/
+/*Finesse Calendar Application for Calendar Tab: https://www.raymondcamden.com/2017/02/24/an-example-of-a-static-site-with-a-dynamic-calendar*/
+/*Finesse a Google Calendar Integration: https://support.google.com/calendar/answer/41207?hl=en*/
+
+/*COLOR PALETTE:
+
+Ivey Green:			#034638 | rgb(3,70,56)
+Slate Gray:			#6B6D76 | rgb(107,109,118)
+Zorba Brown:		#A69888 | rgb(166,152,136)
+White:				#FFFFFF | rgb(255,255,255)
+Wild Blue Yonder	#6982AD | rgb(105,130,173)	
+
+*/
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /*  overflow-x: hidden;
+	overflow-y: visible;*/
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+#typing-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 500px;
+}
+
+.particles-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.animation_background {
+  background-image: linear-gradient(
+    to bottom,
+    #071b26 0%,
+    #071b26 30%,
+    #8a3b12 100%
+  );
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/* Start of navbar styles */
+
+#mainNavbar {
+  font-size: 1.25rem;
+  font-weight: 300;
+  background-color: transparent;
+  transition: background 0.4s ease;
+}
+
+#mainNavbar.scrolled {
+  background: #000;
+}
+
+#IveyFintechMainLogo {
+  height: 40px;
+  margin-top: 0.2rem;
+  transition: all 1s ease;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.nav-link {
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color:focus,
+.dropdown-item-text-color:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #fff;
+}
+
+.dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+
+  border-color: transparent;
+  border-bottom-left-radius: 4px;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  padding: 0;
+  margin: 0;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #000;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown.show .dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s, visibility 0s;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  max-height: 190px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* End of nav-bar styling */
+
+#typing-section .content-jumbosplash #mainHeader {
+  color: #fff;
+  font-weight: 700;
+  font-size: 5rem;
+  padding-top: 100px;
+}
+#typing-section .content-jumbosplash #mainSubheader {
+  color: #fff;
+  text-align: left;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+#mainRPHeader {
+  color: #fff;
+  font-weight: 700;
+  font-size: 5rem;
+  padding-top: 75px;
+}
+
+#bootstrap-overrides .missionStatement,
+.border-left,
+.headingGroup {
+  border-width: 2px !important;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.section-separator-dots {
+  color: rgb(255, 255, 255);
+  font-size: 200px;
+  line-height: 0.3;
+}
+
+/* Cursor */
+.typed-cursor {
+  color: #fff;
+  text-align: left;
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+/* If fade out option is set */
+.typed-fade-out {
+  color: #fff;
+  text-align: left;
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+#typing-section .content-jumbosplash {
+  text-align: left;
+}
+
+#toronto-skyline {
+  position: absolute;
+  height: 250px;
+	z-index: 1000;
+	max-width: 100%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  top: -250px;
+	left: 0;
+	object-fit: cover;
+	z-index: -1;
+}
+@media (max-width: 600px) {
+  #toronto-skyline {
+    height: 175px;
+		max-width: 100%;
+		top: -175px;
+  }
+}
+@media (min-width: 1500px) {
+  #toronto-skyline {
+    height: 350px;
+    top: -350px;
+  }
+}
+
+#headerSection {
+  background-color: black;
+  position: relative;
+}
+
+#bank-blurb {
+  font-size: 1rem;
+}
+
+#scotia-lab-icon {
+  padding: -2px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 10px;
+  border-color: #fff;
+  height: 150px;
+  width: auto;
+  object-position: center;
+}
+
+#scotia-lab-micro-link {
+  font-size: 1rem !important;
+}
+
+.headingSubGroup,
+.headingSubGroupSpecial,
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.magazine-thumbnail {
+  height: auto;
+  width: 300px;
+}
+
+#magazineCarousel {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.carousel-control-prev.magazine-button {
+  margin-left: -55px;
+}
+
+.carousel-control-next.magazine-button {
+  margin-right: -55px;
+}
+
+#carousel-container {
+  width: 400px !important;
+  height: auto;
+}
+
+a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+#fm-medium-embed {
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fm-post-wrapper {
+  display: inline-block;
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+  text-align: left;
+  margin: 10px;
+  height: 250px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+.fm-post-title {
+  font-size: 20px;
+  height: 25px;
+  white-space: wrap;
+  padding-top: 10px;
+  overflow: visible;
+  text-overflow: wrap;
+}
+
+.fm-post-sub-title {
+  min-height: 100px;
+  line-height: 24px;
+  color: #333;
+  display: none;
+}
+
+.fm-post-read-more {
+  margin-top: 75px;
+  display: block;
+}
+
+.fm-medium-profile {
+  margin-top: 10px;
+  padding: 5px;
+  display: block;
+}
+
+.fm-medium-profile a {
+  display: inline-block;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.research-event-img {
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.research-event-subcaption {
+  color: white;
+  text-shadow: 0px 0px 20px #000000;
+}
+
+#comp-highlight {
+  color: rgb(112, 190, 255);
+}
+
+#comp-highlight,
+#conf-highlight,
+#inter-highlight {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.perk-holder {
+  color: white;
+}
+
+.research-perk-icon {
+  font-size: 80px;
+}
+
+.research-perk-heading {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h5.research-perk-text {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.perk-holder {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-out-section {
+  position: relative;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-image: linear-gradient(black, transparent);
+}
+
+/*<--Responsive Media Queries-->*/
+
+@media (max-width: 1200px) {
+  #IveyFintechMainLogo {
+    height: 50px;
+  }
+  #mainNavbar {
+    background-color: #000;
+  }
+}
+
+@media (max-width: 1000px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 3rem;
+  }
+  .typed-cursor {
+    font-size: 3.5rem;
+  }
+  .typed-fade-out {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .missionStatement {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 770px) {
+  #mainRPHeader {
+    font-size: 3.5rem;
+  }
+  #typing-section .content-jumbosplash #mainHeader {
+    font-size: 3.5rem;
+  }
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 2rem;
+  }
+  .typed-cursor {
+    font-size: 2.5rem;
+  }
+  .typed-fade-out {
+    font-size: 2.5rem;
+  }
+  .headingSubGroup,
+  .headingSubGroupSpecial,
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .research-perk-text {
+    width: 225px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 880px) {
+  .missionStatement {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #IveyFintechMainLogo {
+    height: 35px;
+  }
+  #mainRPHeader {
+    font-size: 2.5rem;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  #typing-section .content-jumbosplash #mainHeader {
+    font-size: 2.5rem;
+  }
+
+  .headingGroup h1 {
+    font-size: 1.75rem;
+  }
+  .headingGroup h4 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .magazine-thumbnail {
+    width: 200px;
+    height: auto;
+  }
+
+  #carousel-container {
+    width: 300px !important;
+    height: auto;
+  }
+
+  .fm-post-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+  .fm-post-read-more {
+    position: absolute;
+    margin-top: 90px;
+  }
+  h5.research-perk-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 470px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 1.75rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+  }
+  .typed-fade-out {
+    font-size: 2rem;
+  }
+  .headingSubGroup,
+  .headingSubGroupSpecial,
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 470px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 1.75rem;
+  }
+  .typed-cursor {
+    font-size: 2rem;
+  }
+  .typed-fade-out {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 440px) {
+  #typing-section .content-jumbosplash #mainSubheader {
+    font-size: 1.4rem;
+  }
+  .typed-cursor {
+    font-size: 1.6rem;
+  }
+  .typed-fade-out {
+    font-size: 1.6rem;
+  }
+  .headingSubGroup,
+  .headingSubGroupSpecial,
+  h1 {
+    font-size: 1.5rem;
+  }
+}

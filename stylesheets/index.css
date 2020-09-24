@@ -1,0 +1,881 @@
+/*Ivey Green: #034638*, RGB: R3, G70, B56 */
+/*Possible custom burger icons: https://codepen.io/designcouch/pen/Atyop*/
+/*Finesse Menu Animations: https://www.josh.ai/*/
+/*Using multiple shapes in particles.js (bitcoins, $s, dots, etc.)*/
+/*Finesse Calendar Application for Calendar Tab: https://www.raymondcamden.com/2017/02/24/an-example-of-a-static-site-with-a-dynamic-calendar*/
+/*Finesse a Google Calendar Integration: https://support.google.com/calendar/answer/41207?hl=en*/
+
+/*COLOR PALETTE:
+
+Ivey Green:			#034638 | rgb(3,70,56)
+Slate Gray:			#6B6D76 | rgb(107,109,118)
+Zorba Brown:		#A69888 | rgb(166,152,136)
+White:				#FFFFFF | rgb(255,255,255)
+Wild Blue Yonder	#6982AD | rgb(105,130,173)	
+
+*/
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /*  overflow-x: hidden;
+  overflow-y: visible;*/
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+body {
+  color: #000;
+  background-color: #034638;
+  transition: background 1s ease;
+}
+
+.particles-section {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 500px;
+}
+
+.color-whiteintro {
+  background-color: rgb(122, 111, 111);
+}
+.color-blackprobono {
+  background-color: #000;
+}
+.color-navyresearch {
+  background-color: rgb(4, 17, 61);
+}
+.color-greeninno {
+  background-color: rgb(245, 245, 245);
+}
+
+.color-iveygreen {
+  background-color: #034638;
+}
+
+.centerize-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.animation_background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/* Start of navbar styles */
+
+#mainNavbar {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+#IveyFintechMainLogo {
+  height: 40px;
+  margin-top: 0.2rem;
+  transition: all 1s ease;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.navBar {
+  background-color: transparent;
+}
+
+.nav-link {
+  transition: all 1s ease;
+}
+
+#mainNavbar.scrolled {
+  background: #034638;
+  transition: background 1s ease;
+}
+
+.dropdown-item-text-color {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color:focus,
+.dropdown-item-text-color:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #fff;
+}
+
+.dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+
+  border-color: transparent;
+  border-bottom-left-radius: 4px;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  padding: 0;
+  margin: 0;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #034638;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown.show .dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s, visibility 0s;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  max-height: 190px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* End of nav-bar styling */
+
+.particles-section #content-jumbosplash {
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.particles-section #content-jumbosplash #mainHeader {
+  color: #fff;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.particles-section #content-jumbosplash #mainSubheader {
+  color: #fff;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.content-jumbosplash-line {
+  width: 500px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: center;
+}
+
+.content-holder-box {
+  padding: 20px;
+  background-color: rgb(242, 242, 242);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.75);
+}
+
+.bordered-right {
+  border-right: 0.5px solid rgb(107, 107, 107);
+}
+
+h3.centerleft {
+  display: inline-block;
+  text-align: left;
+}
+
+#club-presentation {
+  height: 100vh;
+}
+
+#fintech-definition-holder {
+  height: 100%;
+}
+
+#fintech-word-main {
+  font-weight: 400;
+  font-size: 2.75rem;
+  font-family: "Literata", serif;
+}
+
+#plural-word {
+  color: #034638;
+  font-size: 1.5rem;
+}
+
+#noun-word {
+  color: #034638;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+#linguistic-word {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 3;
+}
+
+#plural-word-main {
+  margin-left: 1rem;
+}
+
+p.subText {
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.definition-word {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-overflow: wrap;
+}
+
+h3#quote {
+  width: 100%;
+  text-align: right;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  color: #034638;
+  line-height: 1;
+}
+
+h1.mainHeader {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+h2.mainSubHeader {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#jumbotron-cta-btn {
+  pointer-events: none;
+  text-shadow: none;
+  width: 200px;
+  font-size: 1.1rem;
+  color: #FFF;
+  font-weight: 100;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+#jumbotron-cta-btn-icon {
+  font-size: 1.5rem;
+  padding-left: 5px;
+}
+
+.industry-card {
+  width: calc(100% / 8);
+  height: 150px;
+  background-color: rgba(242, 242, 242);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.industry-icon {
+  color: #034638;
+  font-size: 3.5rem;
+}
+
+p.landing-text {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.metric-card {
+  width: calc(100% / 3.15);
+  height: 135px;
+  position: relative;
+  overflow: visible;
+}
+
+.metric-card.content-holder-box {
+  padding: 0;
+  border: 20px solid transparent;
+}
+
+.metric-card-text {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.metric-card-number {
+  position: absolute;
+  overflow: visible;
+  right: 0;
+  bottom: 0;
+}
+
+.metric-card-icon {
+  position: absolute;
+  float: left;
+  bottom: 0;
+  margin-left: -45px;
+  font-size: 35px;
+  margin-bottom: 8px;
+  color: #034638;
+}
+
+.metric-card-counter {
+  float: right;
+  line-height: 1;
+  font-size: 4rem;
+  color: #034638;
+  font-weight: 600;
+}
+
+.mission-holder {
+  padding: 10px 0px;
+}
+
+.mission-emphasis {
+  color: #034638;
+  font-weight: 600;
+}
+
+p.mission-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2.5;
+}
+
+.mission-content-holder {
+  margin: auto;
+}
+
+.mission-slideshow {
+  border-radius: 5px;
+  padding: 0 !important;
+  background-color: transparent;
+  width: 100%;
+}
+
+.carousel-item {
+  height: auto;
+}
+
+.mission-slideshow-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+#mission-stats-holder {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.mission-metric-card {
+  width: 100%;
+  position: relative;
+}
+
+.content-holder-box.mission-metric-card {
+  padding: 0px;
+  border: 10px solid transparent;
+}
+
+.mission-metric-card .metric-card-text {
+  font-size: 1.2rem;
+}
+
+.mission-metric-card .metric-card-number .metric-card-icon {
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-left: -30px;
+}
+
+.mission-metric-card .metric-card-number .metric-card-counter {
+  font-size: 2.5rem;
+}
+
+#pro-bono-discovery, #research-discovery {
+  color: #FFF;
+}
+
+#innovation-discovery {
+  color: #000;
+}
+
+#contact-discovery {
+  color: #fff;
+}
+
+h1.portfolio-heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+p.portfolio-description {
+  line-height: 2;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.portfolio-btn-holder {
+  margin-top: 40px;
+  width: 100%;
+}
+.portfolio-learnmore-btn {
+  width: 200px;
+}
+
+#mc_embed_signup {
+  margin: 30px 0px;
+  max-width: 500px;
+}
+
+/*<--Responsive Media Queries-->*/
+
+@media (max-width: 1200px) {
+  #IveyFintechMainLogo {
+    height: 50px;
+  }
+
+  #fintech-word-main {
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: "Literata", serif;
+  }
+
+  #plural-word {
+    color: #034638;
+    font-size: 1.2rem;
+  }
+
+  #noun-word {
+    color: #034638;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 1.75rem;
+  }
+
+  #linguistic-word {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 3;
+  }
+
+  #plural-word-main {
+    margin-left: 0.8rem;
+  }
+  h3#quote {
+    margin-top: 10px;
+  }
+
+  h4.metric-card-text {
+    font-size: 1.2rem;
+  }
+
+  .metric-card-icon {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    margin-left: -45px;
+    font-size: 35px;
+    margin-bottom: 8px;
+    color: #034638;
+  }
+
+  .metric-card-counter {
+    float: right;
+    line-height: 1;
+    font-size: 4rem;
+    color: #034638;
+    font-weight: 600;
+  }
+  .mission-holder {
+    padding: 0px 0px;
+  }
+  h1.portfolio-heading {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  
+  p.portfolio-description {
+    line-height: 2;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  
+  .portfolio-btn-holder {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  p.mission-text {
+    font-size: 1rem;
+  }
+  h2.mainSubHeader {
+    font-size: 0.75rem;
+  }
+
+  .industry-card {
+    width: calc(100% / 8);
+    height: 125px;
+    background-color: rgba(242, 242, 242);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .industry-icon {
+    color: #034638;
+    font-size: 2rem;
+  }
+  h4.metric-card-text {
+    font-size: 1rem;
+  }
+
+  .metric-card-icon {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    margin-left: -40px;
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #034638;
+  }
+
+  .metric-card-counter {
+    float: right;
+    line-height: 1;
+    font-size: 3rem;
+    color: #034638;
+    font-weight: 600;
+  }
+  .mission-metric-card .metric-card-text {
+    font-size: .9rem;
+  }
+  h1.portfolio-heading {
+    font-size: 2.25rem;
+    margin-bottom: 25px;
+  }
+  
+  p.portfolio-description {
+    line-height: 1.75;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .particles-section #content-jumbosplash #mainHeader {
+    font-size: 3.5rem;
+  }
+  .particles-section #content-jumbosplash #mainSubheader {
+    font-size: 1rem;
+  }
+  .content-jumbosplash-line {
+    width: 350px;
+  }
+
+  #fintech-definition-holder {
+    margin: 10px;
+  }
+
+  h1.mainHeader {
+    font-size: 1rem;
+  }
+
+  .content-holder-box.industry-card {
+    padding: 5px;
+  }
+  .industry-card {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(242, 242, 242);
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .content-holder-box {
+    padding: 10px;
+  }
+  .mission-slideshow-img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 769px) {
+  #insurance-card {
+    margin-left: 40px;
+  }
+
+  #alternative-card {
+    margin-right: 40px;
+  }
+  .metric-card.content-holder-box {
+    padding: 0;
+    border: 10px solid transparent;
+    height: 90px;
+  }
+  h4.metric-card-text {
+    font-size: 0.8rem;
+  }
+
+  .metric-card-icon {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    margin-left: -30px;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #034638;
+  }
+
+  .metric-card-counter {
+    float: right;
+    line-height: 1;
+    font-size: 2rem;
+    color: #034638;
+    font-weight: 600;
+  }
+  h1.portfolio-heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  p.portfolio-description {
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+  .portfolio-btn-holder {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #mission-stats-holder {
+    height: 60px;
+  }
+  p.mission-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .bordered-right {
+    border-bottom: 0.5px solid rgb(107, 107, 107);
+    border-right: none;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  #IveyFintechMainLogo {
+    height: 35px;
+  }
+  .particles-section #content-jumbosplash #mainHeader {
+    font-size: 2.5rem;
+  }
+
+  p.subText {
+    font-size: 0.8rem;
+  }
+  .definition-word {
+    font-size: 1rem;
+  }
+
+  h3#quote {
+    font-size: 1rem;
+  }
+  #fintech-word-main {
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "Literata", serif;
+  }
+
+  #plural-word {
+    color: #034638;
+    font-size: 0.7rem;
+  }
+
+  #noun-word {
+    color: #034638;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 1rem;
+  }
+
+  #linguistic-word {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  #plural-word-main {
+    margin-left: 0.8rem;
+    font-size: 0.8rem;
+  }
+  h3#quote {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  .mission-metric-card .metric-card-number .metric-card-icon {
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: -25px;
+  }
+}
+
+@media (max-width: 480px) {
+  h4.metric-card-text {
+    font-size: 0.7rem;
+  }
+
+  .metric-card-icon {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    margin-left: -20px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #034638;
+  }
+
+  .metric-card-counter {
+    float: right;
+    line-height: 1;
+    font-size: 1.5rem;
+    color: #034638;
+    font-weight: 600;
+  }
+  .mission-slideshow-img {
+    height: 200px;
+  }
+  .mission-metric-card .metric-card-text {
+    font-size: .7rem;
+  }
+  .mission-metric-card .metric-card-number .metric-card-counter {
+    font-size: 1.5rem;
+  }
+  .mission-metric-card .metric-card-number .metric-card-icon {
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .content-jumbosplash-line {
+    width: 250px;
+  }
+  h4.metric-card-text {
+    font-size: 0.6rem;
+  }
+
+  .metric-card.content-holder-box {
+    height: 80px;
+  }
+
+  .metric-card-icon {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    margin-left: -15px;
+    font-size: 10px;
+    margin-bottom: 4px;
+    color: #034638;
+  }
+
+  .metric-card-counter {
+    float: right;
+    line-height: 1;
+    font-size: 1.2rem;
+    color: #034638;
+    font-weight: 600;
+  }
+  .mission-slideshow-img {
+    height: 150px;
+  }
+  h1.portfolio-heading {
+    font-size: 1.4rem;
+  }
+  p.portfolio-description {
+    font-size: .8rem;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 350px) {
+  .industry-card {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(242, 242, 242);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .industry-icon {
+    color: #034638;
+    font-size: 1.2rem;
+  }
+  h2.mainSubHeader {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .headingGroup h1 {
+    font-size: 1.75rem;
+  }
+  .headingGroup h4 {
+    font-size: 1rem;
+  }
+}

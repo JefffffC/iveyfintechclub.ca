@@ -1,0 +1,225 @@
+/*Ivey Green: #034638*, RGB: R3, G70, B56 */
+/*Possible custom burger icons: https://codepen.io/designcouch/pen/Atyop*/
+/*Finesse Menu Animations: https://www.josh.ai/*/
+/*Using multiple shapes in particles.js (bitcoins, $s, dots, etc.)*/
+/*Finesse Calendar Application for Calendar Tab: https://www.raymondcamden.com/2017/02/24/an-example-of-a-static-site-with-a-dynamic-calendar*/
+/*Finesse a Google Calendar Integration: https://support.google.com/calendar/answer/41207?hl=en*/
+
+/*COLOR PALETTE:
+
+Ivey Green:			#034638 | rgb(3,70,56)
+Slate Gray:			#6B6D76 | rgb(107,109,118)
+Zorba Brown:		#A69888 | rgb(166,152,136)
+White:				#FFFFFF | rgb(255,255,255)
+Wild Blue Yonder	#6982AD | rgb(105,130,173)	
+
+*/
+
+/* Start of navbar styles */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /*  overflow-x: hidden;
+  overflow-y: visible;*/
+  font-family: Roboto;
+	font-weight: 400;
+	background-color: #FFF;
+	color: #000;
+}
+
+#mainNavbar {
+  font-size: 1.25rem;
+	font-weight: 300;
+	background-color: #FFF;
+}
+
+#IveyFintechMainLogo {
+  height: 40px;
+  margin-top: 0.2rem;
+  transition: all 1s ease;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.navBar {
+  background-color: #000;
+}
+
+.nav-link {
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color {
+  color: #000;
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.dropdown-item-text-color:focus,
+.dropdown-item-text-color:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: #000;
+}
+
+.dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s 0.1s,
+    visibility 0s 0.3s;
+
+  border-color: transparent;
+  border-bottom-left-radius: 4px;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  padding: 0;
+  margin: 0;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #FFF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.dropdown.show .dropdown-menu {
+  -webkit-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -moz-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -ms-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  -o-transition: background 1s ease, max-height 0.5s, opacity 0.2s,
+    visibility 0s;
+  transition: background 1s ease, max-height 0.5s, opacity 0.2s, visibility 0s;
+
+  /* transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-transition: background 1s ease; */
+
+  max-height: 190px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* End of nav-bar styling */
+
+section.team-section {
+	padding-top: 15vh;
+}
+
+h1.mainHeader {
+	font-size: 5rem;
+	font-weight: 600;
+}
+
+.mainContainer {
+	height: 100%;
+	width: 100%;
+}
+
+.exec-holder {
+	margin-bottom: 20px;
+	width: 250px;
+	height: 300px;
+}
+
+.exec-img-holder {
+	position: relative;
+	width: 61.8%;
+	padding-bottom: 61.8%;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.exec-img {
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+.exec-name{
+	font-weight: 300;
+}
+.exec-title {
+	font-weight: 400;
+	font-size: .8rem;
+}
+
+.mail-btn {
+	padding: 8px;
+	font-size: 1.5rem;
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #A69888;
+	border-radius: 50%;
+	transition: all .2s ease-in-out;
+}
+
+a.mail-btn:hover {
+	text-decoration: none;
+	color: #A69888;
+	background-color: #FFF;
+}
+
+.linkedin-btn {
+	padding: 8px 9px;
+	font-size: 1.5rem;
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: #0077B5;
+	border-radius: 50%;
+	transition: all .2s ease-in-out;
+}
+a.linkedin-btn:hover {
+	text-decoration: none;
+	color: #0077B5;
+	background-color: #FFF;
+}
+
+
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 767.98px) {
+	h1.mainHeader {
+		font-size: 4rem;
+	}
+}
+
+@media (max-width: 575.98px) {
+	h1.mainHeader {
+		font-size: 3rem;
+	}
+}
+
