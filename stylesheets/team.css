@@ -170,24 +170,6 @@ h1.mainHeader {
 	font-size: .8rem;
 }
 
-.mail-btn {
-	padding: 8px;
-	font-size: 1.5rem;
-	color: #FFF;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background-color: #A69888;
-	border-radius: 50%;
-	transition: all .2s ease-in-out;
-}
-
-a.mail-btn:hover {
-	text-decoration: none;
-	color: #A69888;
-	background-color: #FFF;
-}
-
 .linkedin-btn {
 	padding: 8px 9px;
 	font-size: 1.5rem;

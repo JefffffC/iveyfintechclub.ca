@@ -34,7 +34,7 @@ window.addEventListener(
       decimalPlaces: 0,
       suffix: "%"
     });
-    var countUpmembers = new CountUp("numMembers", 225, {
+    var countUpmembers = new CountUp("numMembers", 230, {
       duration: 2
     });
     var countUppartners = new CountUp("numPartners", 23, {
